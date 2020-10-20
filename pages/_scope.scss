@@ -1,3 +1,44 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the SCOPE of the application.
 // -----------------------------------------------------------------------------
+
+video {
+    /* override other styles to make responsive */
+    width: 100%;
+    height: auto;
+  }
+
+.surge-teams {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: 200px 1fr;
+        
+    }
+
+}
+.videos {
+    .video-container {
+        position: relative;
+        p {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+        }
+        i {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+        }
+    }
+}
+  .scope {
+    background: blue;
+
+  }

@@ -20,3 +20,14 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+body, html {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+
+.container {
+  background: linear-gradient(180deg,#005e69 0%,#004f58 63%);
+  height: 100vh;
+}
