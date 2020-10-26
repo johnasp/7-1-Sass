@@ -8,37 +8,56 @@ video {
     height: auto;
   }
 
-.surge-teams {
+.surgeteams {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    @media only screen and (min-width: 1024px) {
-        grid-template-columns: 200px 1fr;
-        
+    grid-template-columns: 240px 1fr 300px;
+    height: 100%;
+    .videos {
+        margin: $gutter $gutter 0 $gutter;
+        .video-container {
+            position: relative;
+            line-height: 10px;
+            margin-bottom: $gutter;
+            p {
+                background: #063137de;
+                color: #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                line-height: 1em;
+                padding: 4px 12px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            i {
+                background: #000;
+                color: #fff;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin: 0;
+            }
+        }
+    }
+    .scope {
+        margin-top: $gutter;
+        @media only screen and (min-width: 1340px) {
+            width: 1000px;
+            justify-self: center;
+        }
+    }
+    .chat {
+        margin: 0 0 0 $gutter;
+        background: white;
+        grid-column: 3/4; 
+        grid-row: 1/3;
+      
+
+    }
+    .controls {
+        grid-column: 2/3;
+        text-align: center;
     }
 
 }
-.videos {
-    .video-container {
-        position: relative;
-        p {
-            background: #000;
-            color: #fff;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: 0;
-        }
-        i {
-            background: #000;
-            color: #fff;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 0;
-        }
-    }
-}
-  .scope {
-    background: blue;
-
-  }
