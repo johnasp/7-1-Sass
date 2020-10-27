@@ -8,56 +8,100 @@ video {
     height: auto;
   }
 
-.surgeteams {
+.teams {
     display: grid;
     grid-template-columns: 240px 1fr 300px;
+    grid-template-rows: 1fr 80px;
     height: 100%;
-    .videos {
-        margin: $gutter $gutter 0 $gutter;
+    transition: all 2s ease-in-out;
+    &.chat-off {
+        grid-template-columns: 240px 1fr 20px;
+        transition: all 2s ease-in-out;
+    }
+    h3 {
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .proctors {
+        margin: 0 $gutter 0 $gutter;
+        align-self: center;
         .video-container {
             position: relative;
             line-height: 10px;
             margin-bottom: $gutter;
             p {
-                background: #063137de;
+                background: #0c8fa2;
                 color: #fff;
                 position: absolute;
                 top: 0;
                 left: 0;
                 margin: 0;
                 line-height: 1em;
-                padding: 4px 12px;
+                padding: 4px 10px;
                 text-transform: uppercase;
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: bold;
             }
             i {
-                background: #000;
+                background: #0c8fa2;
                 color: #fff;
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 margin: 0;
+                padding: 4px 8px;
             }
         }
     }
     .scope {
-        margin-top: $gutter;
-        @media only screen and (min-width: 1340px) {
-            width: 1000px;
-            justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        video {
+            @include breakpoint(1500) {
+                width: 1000px;
+            }
         }
+
     }
     .chat {
         margin: 0 0 0 $gutter;
-        background: white;
+        background: #03afc7;
+        color: black;
         grid-column: 3/4; 
         grid-row: 1/3;
-      
-
+        padding: $gutter;
+        position: relative;
+        h3 {
+            color: black;
+        }
+        .ico-chat {
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            padding: 12px;
+            background: #03afc7;
+            left: -40px;
+        }
     }
     .controls {
         grid-column: 2/3;
-        text-align: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        .btns {
+            background: #eaeaea;
+            padding: 20px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            button {
+                margin-right: 12px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
 
 }

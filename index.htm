@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurgeTeams</title>
     <link rel="stylesheet" href="main.css">
-
+    <script src="https://kit.fontawesome.com/4a5f5c3b9b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="surgeteams">
-        <aside class="videos">
+    <main class="teams">
+        <header class="proctors">
+            <h3>Proctors</h3>
             <div class="video-container">
                 <video src="http://docs.evostream.com/sample_content/assets/nosound.mp4" autoplay loop></video>
-                <p>John Aspinall</p>
-                <i class="fas fa-volume-mute"></i>
+                <p>Self</p>
+                <i class="fas fa-volume-off"></i>
             </div>
             <div class="video-container">
                 <video src="http://docs.evostream.com/sample_content/assets/nosound.mp4" autoplay loop></video>
                 <p>Sajad Rana</p>
-                <i class="fas fa-volume-mute"></i>
+                <i class="fas fa-volume-off"></i>
             </div>
             <div class="video-container">
                 <video src="http://docs.evostream.com/sample_content/assets/nosound.mp4" autoplay loop></video>
                 <p>Mark McCormack</p>
-                <i class="fas fa-volume-mute"></i>
+                <i class="fas fa-volume-off"></i>
             </div>
             <div class="video-container">
                 <video src="http://docs.evostream.com/sample_content/assets/nosound.mp4" autoplay loop></video>
                 <p>Paul Fothergill</p>
-                <i class="fas fa-volume-mute"></i>
+                <i class="fas fa-volume-off"></i>
             </div>
-        </aside>
+
+            <button>Mute all</button>
+        </header>
 
         <section class="scope">
             <video src="http://docs.evostream.com/sample_content/assets/nosound.mp4" autoplay loop></video>
@@ -39,18 +42,31 @@
         <aside class="chat">
             <h3>Chat</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque facere voluptates alias reprehenderit aliquid. Excepturi quam, explicabo quod, rerum iste, odit delectus facilis quia aliquam maiores non voluptatum ipsa nam?</p>
+            <i class="fas fa-comment ico-chat"></i>
         </aside>
 
         <footer class="controls">
-            <button>Button 1</button>
-            <button>Button 2</button>
-            <button>Button 3</button>
-            <button>Button 4</button>
-            <button>Button 5</button>
-            <button>Button 6</button>
+            <div class="btns">
+                <button>Hide all</button>
+                <button>End call</button>
+                <button>Take photo</button>
+                <button>Record video</button>
+                <button>Show gallery</button>
+            </div>
         </footer>
 
     </main>
     <script src="https://use.fontawesome.com/53c5a5742b.js"></script>
+
+    <script>
+        const teams = document.querySelector('.teams');
+        const chatBtn = document.querySelector('.ico-chat');
+        console.log(teams.classList);
+
+        chatBtn.addEventListener('click', () => {
+            teams.classList.toggle('chat-off');
+        });
+
+    </script>
 </body>
 </html>
