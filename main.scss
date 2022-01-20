@@ -20,6 +20,8 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/sidebar',
+  'layout/navigation',
   'layout/footer';
 
 // 5. Components
@@ -28,13 +30,7 @@
 
 // 6. Page-specific styles
 @import
-  'pages/admin',
-  'pages/clinics',
-  'pages/dashboard',
-  'pages/patients',
-  'pages/reports',
-  'pages/scope',
-  'pages/users';
+  'pages/home';
 
 // 7. Themes
 @import
